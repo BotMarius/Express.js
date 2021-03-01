@@ -8,8 +8,7 @@
 
         <div class="container contentSite">
             <div class="wrapper">
-                <% if (password !== "admin" && username !== "admin") { %>
-                <form action="/" method="post">
+                <form action="auth/login" method="post">
                     <div class="mb-3">
                         <label for="inputUser" class="form-label">Identifiant</label>
                         <input type="text" class="form-control" name="username"  id="imputUser" />
@@ -19,11 +18,8 @@
                         <input type="password" class="form-control" name="password"  id="imputPw" />
                     </div>
     
-                    <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit">Login</button>
+                    <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="submit">Login</button>
                 </form>
-                <% } else { %>
-                    <h2>Bonjour <%= username %></h2>
-                <% } %>
             </div>
         </div>
 
